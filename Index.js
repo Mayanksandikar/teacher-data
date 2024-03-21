@@ -26,7 +26,7 @@ mongoose.connect(URI, {
   console.log("Error connecting to the database:", error);
 });
 
-app.get("/" , (req,res)=>{
+app.get("/teachers" , (req,res)=>{
   res.json("hello")
 })
 
