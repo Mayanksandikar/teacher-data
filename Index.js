@@ -28,7 +28,7 @@ mongoose.connect(URI, {
 
 app.get("/" , (req,res)=>{
   res.json("hello")
-}
+})
 
 // Route for handling student-related routes
 const userStudentRoute = require("./routes/userStudentRoutes");
