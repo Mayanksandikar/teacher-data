@@ -18,15 +18,17 @@ app.use(express.json());
 
 // Connect to the MongoDB database
 const URI = "mongodb+srv://mayanksandikar191098:P612SpRzc2bEeue0@reactjs.smvpawt.mongodb.net/SchoolTeacher?retryWrites=true&w=majority&appName=reactjs";
-
+ 
 mongoose.connect(URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
 }).then(() => {
   console.log("Connected to the database successfully");
 }).catch((error) => {
   console.log("Error connecting to the database:", error);
 });
+
+app.get("/" , (req,res)=>{
+  res.json("hello")
+}
 
 // Route for handling student-related routes
 const userStudentRoute = require("./routes/userStudentRoutes");
